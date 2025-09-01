@@ -4,7 +4,7 @@
     <a href="https://react-tailwindcss-datepicker.vercel.app/" target="_blank">
       <img alt="React Tailwindcss Datepicker" width="100" style="border-radius: 100%;" src="https://raw.githubusercontent.com/onesine/react-tailwindcss-datepicker/master/assets/img/calendar_logo.svg?raw=true">
     </a><br><br>
-    A modern date range picker component for React using Tailwind 3 and dayjs. Alternative to Litepie Datepicker which uses Vuejs.
+    A modern date range picker component for React using Tailwind CSS 3 & 4 and dayjs. Alternative to Litepie Datepicker which uses Vuejs.
 </p>
 
 <div align="center">
@@ -54,7 +54,7 @@ Only **react-tailwindcss-datepicker** versions greater than or equal to **1.7.4*
 
 ## Installation
 
-React Tailwindcss Datepicker uses Tailwind CSS 3 (with the
+React Tailwindcss Datepicker uses Tailwind CSS 3 or 4 (with the
 [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) plugin) &
 [Dayjs](https://day.js.org/en/) under the hood to work.
 
@@ -81,6 +81,27 @@ Make sure you have installed the peer dependencies as well with the below versio
 ```
 "dayjs": "^1.11.12",
 "react": "^17.0.2 || ^18.2.0" || "^19.0.0"
+```
+
+### Tailwind CSS 4 Users
+
+For Tailwind CSS 4 projects, you'll need to install the additional PostCSS plugin:
+
+```bash
+npm install @tailwindcss/postcss
+# or
+yarn add @tailwindcss/postcss
+```
+
+Then update your `postcss.config.js`:
+
+```javascript
+module.exports = {
+    plugins: {
+        "@tailwindcss/postcss": {},
+        autoprefixer: {}
+    }
+};
 ```
 
 ## Simple Usage
